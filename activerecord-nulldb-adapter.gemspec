@@ -11,26 +11,16 @@ Gem::Specification.new do |s|
     "LICENSE",
      "README.rdoc"
   ]
-  s.files = [
-    ".gitignore",
-     "Gemfile",
-     "Gemfile.lock",
-     "LICENSE",
-     "README.rdoc",
-     "Rakefile",
-     "VERSION",
-     "activerecord-nulldb-adapter.gemspec",
-     "lib/nulldb.rb",
-     "lib/activerecord-nulldb-adapter.rb",
-     "lib/active_record/connection_adapters/nulldb_adapter.rb",
-     "lib/nulldb/arel_compiler.rb",
-     "lib/nulldb/rails.rb",
-     "lib/nulldb/core.rb",
-     "lib/nulldb_rspec.rb",
-     "lib/tasks/database.rake",
-     "spec/nulldb_spec.rb",
-     "spec/spec.opts"
-  ]
+  s.files = Dir.glob("{lib,spec}/**/*") + %w(
+    .gitignore
+    Gemfile
+    Gemfile.lock
+    LICENSE
+    README.rdoc
+    Rakefile
+    VERSION
+    activerecord-nulldb-adapter.gemspec
+  )
   s.homepage = %q{http://github.com/nulldb/nulldb}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
